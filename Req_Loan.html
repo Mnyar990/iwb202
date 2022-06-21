@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Req_Loan</title>
+<link rel="stylesheet" href="Style.css" />
+    
+
+</head>
+<body dir="rtl">
+
+<div class="div1">
+<hr>
+ <a href="home.html"><button>home</button></a>
+ <a href="aboutus.html"><button>aboutus</button></a>
+ <a href="products.html"><button>products</button></a>
+ <a href="Req_Loan.html"><button>Req_Loan</button></a>
+</div>
+<hr>
+
+ <form name="f1" >
+   
+ <center> <p> أدخـل المعلومات المطلوبة لتقديم الطلب:</p> 
+<table>
+  <tr><td colspan="2"><p> اﻻﺳﻢ اﻟﻜﺎﻣﻞ </p></td>
+  <td colspan="2"><input class="textBox" id="i_name" type="text"  placeholder="اﺳﻤﻚ اﻟﻜﺎﻣﻞ"  required autofocus pattern="[A-Za-zhا-ﻱ/w ]{3,30}" title="اﻻﺳﻢ ﻳﺠﺐ اﻥ ﻳﻜﻮﻥ ﺑﻴﻦ 3 ﻭ 30 ﺣﺮﻓﺎ ﻭﻻ ﻳﻤﻜﻦ اﻥ ﻳﺘﻀﻤﻦ اﺭﻗﺎﻣﺎ اﻭ ﻣﺤﺎﺭﻓﺎ "></td>
+   
+<td colspan="2"><p> اﻟﺮﻗﻢ اﻟﻮﻃﻨﻲ </p></td>
+   <td colspan="2"><input class="textBox" id="i_id" type="text" placeholder="ﺭﻗﻤﻚ اﻟﻮﻃﻨﻲ 11 ﺧﺎﻧﺔ"  required pattern="[01]{1}[0-9]{10}"></td></tr>
+   
+<tr><td colspan="2"><p> ﺭﻗﻢ اﻟﻬﺎﺗﻒ </p></td>
+   <td colspan="2"><input class="textBox" id="i_phone_number" type="tel"  value="09" minlength="10" maxlength="10" required pattern="[0]{1}[9]{1}[56539]{1}[0-9]{7}"></td>
+  
+ <td colspan="2"><p>اﻻﻳﻤﻴﻞ</p></td>
+    <td colspan="2"><input class="textBox" type="email"  id="i_email" name="t4" required placeholder="اﻻﻳﻤﻴﻞ اﻟﺸﺨﺼﻲ"></td></tr>
+   
+ <tr><td colspan="2"><p > ﺗﺎﺭﻳﺦ اﻟﻤﻴﻼﺩ </p></td>
+   <td colspan="2"><input class="textBox" id="i_b_day" type="date" ></td>
+ 
+ <td colspan="2"><p> ﻗﻴﻤﺔ اﻟﻘﺮﺽ</p></td>
+  <td colspan="2">
+  <input class="textBox" type="number" placeholder="قيمة القرض" id="result" min="1000000" max="10000000"></td></tr>
+
+<tr><td colspan="2"><p>ﻧﻮﻉ اﻟﻘﺮﺽ</p></td>
+<td colspan="2"><select class="dropdown" id="type_Q" required>
+ <option >اﻧﻘﺮ ﻟﻻﺧﺘﻴﺎﺭ</option>
+ <option value="commercial" >اﻟﻘﺮﺽ اﻟﺘﺠﺎﺭﻱ</option>
+ <option value="risidential">اﻟﻘﺮﺽ اﻟﺴﻜﻨﻲ</option>
+ <option value="educational">اﻟﻘﺮﺽ اﻟﺘﻌﻠﻴﻤﻲ</option>
+ <option value="agricultural">اﻟﻘﺮﺽ اﻟﺰﺭاﻋﻲ</option>
+ <option value="transport">ﻗﺮﺽ اﻟﻨﻘﻞ</option>
+ <option value="warkshops">ﻗﺮﺽ اﻟﻮﺭﺷﺎﺕ</option>
+ <option value="saving">ﺣﺴﺎﺏ اﻟﺘﻮﻓﻴﺮ</option>
+ <option value="running">اﻟﺤﺴﺎﺏ اﻟﺠﺎﺭﻱ</option>
+</select></td>
+ 
+
+<td colspan="2"><p >ﻋﺪﺩ اﻟﺴﻨﻮاﺕ</p></td>
+<td colspan="2"><select class="dropdown" id="duration">
+ <option >اﻧﻘﺮ ﻟﻻﺧﺘﻴﺎﺭ</option>
+ <option value="3">3</option>
+ <option value="5">5</option>
+ <option value="10">10</option>
+ <option value="15">15</option>
+ <option value="20">20</option>
+</select></td></tr>
+
+
+<tr><td colspan="2"><p>ﻧﻮﻉ اﻟﻔﺎﺋﺪﺓ</p></td>
+<td colspan="2"><select class="dropdown" id="interest" onchange="interest=this.value">
+ <option >اﻧﻘﺮ ﻟﻻﺧﺘﻴﺎﺭ</option> 
+ <option value="monthly">ﺷﻬﺮﻳﺔ</option>
+ <option value="quarterly">ﺭﺑﻌﻴﺔ</option>
+ <option value="yearly">ﺳﻨﻮﻳﺔ</option>
+</select></td>
+
+<td class="td_cap" colspan="3"> <center>	<div id="captchaBackground">
+ <canvas id="captcha">captcha text</canvas>
+ <input class="textBox" id="textBox" type="text" name="text"  required placeholder="رجاء أدخل النص الموجود في الاعلى" >
+ <div id="buttons">
+ <input id="submitButton" type="submit" onclick="information()">
+ <button id="refreshButton" type="submit">Refresh</button></center>
+ </div>
+ <span id="output"></span>
+ </div> </td> 
+</tr></form> </table>
+</div>
+<script type="text/javascript" src="myFunctions.js " >
+
+</script>
+</body>
+</html>

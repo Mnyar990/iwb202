@@ -1,0 +1,131 @@
+body{
+    background-color: rgb(181, 181, 207);
+}
+
+
+button{
+border-radius:5px;
+} 
+
+table{
+    border-style: solid;
+    font-size:medium;
+border-radius:15px;
+background-color:rgba(134, 134, 163, 0.411);
+opacity: 95%;
+}
+
+
+td{text-align:center;}
+
+
+
+
+p{font-size:18px;}
+ 
+.but_pro{
+    height: 40%;
+width: 188%;
+background-color: rgb(152, 90, 211);
+font-size: medium;
+font-size: 20px;
+text-align: right;
+}
+
+
+.but_pro:hover{
+background-color: rgb(81, 81, 167);
+border-color: blue;
+color: white;
+}
+
+
+.textBox {
+ height: 30px;
+width:170px;
+border-radius:10px;
+text-align:center;
+border-color:black;
+}
+
+
+.textBox:hover {
+border-color:rgb(44, 44, 209);
+}
+
+
+.dropdown:hover {
+border-color:rgb(44, 44, 209);
+}
+
+
+.dropdown{
+ height: 30px;
+width:170px;
+border-radius:5px;
+text-align:center;
+}
+
+
+div.div1 {
+background:rgb(84, 84, 151) fixed content-box;
+margin:0;
+padding:0;
+width:100%;
+height:100%;
+text-align: center;
+box-shadow: 1 rgb(97, 127, 155);
+border-radius:20px;
+}
+
+
+
+/* .my_p{   
+font:bold  30px  verdana;
+border: #06039c;
+border-color: blue;
+color:white;
+border-radius:5px;
+} */
+
+
+
+#captcha {
+ height: 40%;
+ width: 70%;
+ font-size: 100px;
+color:blue;
+ letter-spacing: 5px;
+ margin: auto;
+ display: block;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+}
+
+
+
+#submitButton {
+width:35%;
+ margin-top: 2em;
+ margin-bottom: 2em;
+ border-radius: 5px;
+ font-weight: bold;
+background-color:rgb(96, 170, 96);
+
+}
+
+#refreshButton {
+width:35%;
+ background-color:rgb(92, 92, 177);
+border-radius:5px;
+ font-weight: bold;
+}
+
+.incorrectCaptcha {
+ color: blue;
+}
+.correctCaptcha {
+ color: blue;
+}
